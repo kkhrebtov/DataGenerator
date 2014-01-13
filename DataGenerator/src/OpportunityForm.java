@@ -192,18 +192,6 @@ public class OpportunityForm extends JDialog implements ActionListener, ItemList
         System.exit(0);
     }
 
-//    class TextListener implements ActionListener {
-//        public void actionPerformed(ActionEvent e) {
-//            JTextField o = (JTextField) e.getSource();
-//
-//            String label = o.getName();
-//
-//            //switch(label){
-//            //    case "ECD": ECDValue
-//            //}
-//        }
-//    }
-
     class ButtonListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             JButton o = (JButton) e.getSource();

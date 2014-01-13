@@ -112,9 +112,14 @@ public class MainApplication extends JDialog implements ActionListener, ItemList
 
             switch(index) {
                 case 0:
-                    System.out.println("Selected Opportunity");
+                    System.out.println("Opportunity Selected");
                     OpportunityForm oppForm = new OpportunityForm();
                     break;
+                case 1:
+                    System.out.println("Lead Selected");
+                    LeadForm leadForm = new LeadForm();
+                    break;
+
                 case 4:
                     ContactForm contactForm = new ContactForm();
                     break;
