@@ -54,18 +54,6 @@ public class MainApplication extends JDialog implements ActionListener, ItemList
 
     }
 
-    private String[] readLines(String filename) throws IOException {
-        FileReader fileReader = new FileReader(filename);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        List<String> lines = new ArrayList<String>();
-        String line = null;
-        while ((line = bufferedReader.readLine()) != null) {
-            lines.add(line);
-        }
-        bufferedReader.close();
-        return lines.toArray(new String[lines.size()]);
-    }
-
     private void initUI() {
 
         setLayout(new BoxLayout(getContentPane(),
@@ -79,17 +67,6 @@ public class MainApplication extends JDialog implements ActionListener, ItemList
         combobox.setMaximumSize(new Dimension(140, 22));
         combobox.addItemListener(this);
         add(combobox);
-
-        try {
-        accounts = new JComboBox(readLines("D:\\DataGenerator\\DataGenerator\\src\\accounts.txt"));
-        accounts.setSelectedIndex(-1);
-        accounts.setLocation(00, 50);
-        accounts.setPreferredSize(new Dimension(220, 22));
-        accounts.setMaximumSize(new Dimension(220, 22));
-        accounts.addItemListener(this);
-        add(accounts);
-
-        } catch (IOException e) {System.out.println("Can't find file accounts.txt");}
 
         add(Box.createRigidArea(new Dimension(0, 15)));
 
